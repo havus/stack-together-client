@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navbar   from './components/Navbar';
+import Auth     from './scenes/Auth';
+import Home     from './scenes/Home';
+import NotFound from './scenes/NotFound';
+import { NewQuestion, Question } from './scenes/Question';
+// font awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import './ui-kit/index.scss';
+
+library.add(faCaretUp, faCaretDown);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route component={Navbar} />
+      <Switch>
+        <Route path='/auth' component={Auth} />
+        <Route path='/' exact component={Home} />
+        <Route path='/question/new' component={NewQuestion} />
+        <Route path='/question/:id' component={Question} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 

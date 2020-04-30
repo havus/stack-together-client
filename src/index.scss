@@ -8,6 +8,14 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
     monospace;
+}
+
+#root {
+  position: relative;
+  height: 100vh;
+  // background-color: #edf6fe;
+  background-color: #f5f6fa;
+  overflow: scroll;
 }

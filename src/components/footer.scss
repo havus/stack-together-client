@@ -1,0 +1,28 @@
+footer {
+  position: relative;
+  min-height: 89px;
+  // background-color: #41403e;
+  background-color: #414558;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  justify-self: flex-end;
+
+  p {
+    color: white;
+  }
+  
+  p:first-child {
+    font-size: 15px;
+  }
+  p:last-child {
+    margin-top: 5px;
+    font-size: 13px;
+    span {
+      display:inline-block;
+      transform: rotate(180deg);
+    }
+  }
+}

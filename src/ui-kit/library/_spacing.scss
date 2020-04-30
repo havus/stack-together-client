@@ -1,0 +1,40 @@
+$spacing-types      : (m: margin, p: padding);
+$spacing-types-keys : map-keys($spacing-types);
+
+$spacing-sides      : (t: top, r: right, b: bottom, l: left);
+$spacing-sides-keys : map-keys($spacing-sides);
+
+$spacing-2-sides    : x, y;
+$based-multiply     : 3;
+
+@each $spacing-type in $spacing-types-keys {
+  @each $spacing-side in $spacing-sides-keys {
+    @for $range from 1 through 10 {
+      .#{$spacing-type}#{$spacing-side}-#{$range} {
+        // havus
+        #{
+          map-get($spacing-types, $spacing-type)
+        }-#{  
+          map-get($spacing-sides, $spacing-side)
+        }: #{$range * $based-multiply}px !important;
+      }
+
+      .#{$spacing-type}-#{$range} {
+        #{map-get($spacing-types, $spacing-type)}: #{$range * $based-multiply}px !important;
+      }
+    }
+  }
+
+  @each $spacing-2-side in $spacing-2-sides {
+    @for $range from 1 through 10 {
+      .#{$spacing-type}#{$spacing-2-side}-#{$range} {
+        @if $spacing-2-side == x {
+          #{map-get($spacing-types, $spacing-type)}: 0 #{$range * $based-multiply}px !important;
+        }
+        @if $spacing-2-side == y {
+          #{map-get($spacing-types, $spacing-type)}: #{$range * $based-multiply}px 0 !important;
+        }
+      }
+    }
+  }
+}

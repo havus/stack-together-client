@@ -1,0 +1,105 @@
+#new-question {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding: 30px;
+    flex-grow: 1;
+  }
+
+  .main-content {
+    flex-grow: 1;
+  }
+
+  #ask-question-box {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: white;
+    border: .5px solid #a1abb9;
+    // background-color: #c0ddfc;
+    // box-shadow: 0 0 7px #829db9;
+    // -moz-box-shadow: 0 0 7px #829db9;
+    // -webkit-box-shadow: 0 0 7px #829db9;
+
+    #ask-question-box__sub-navigation {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+  
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    #ask-question-box__title,
+    #ask-question-box__content,
+    #ask-question-box__footer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #ask-question-box__footer {
+      #hint-question {
+        margin: 13px 7px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .right-side {
+    max-width: 400px;
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #new-question-note {
+      width: 100%;
+      max-width: 300px;
+
+      border-radius: 3px;
+      border: 1px solid #f2e5bd;
+      background-color: #fdf7e3;
+      
+      #new-question-note__header {
+        padding: 9px;
+        color: rgb(121, 121, 121);
+        background-color: #fbf2d4;
+      }
+      
+      #new-question-note__body {
+        padding: 9px;
+        font-size: 13px;
+
+        #new-question-note__list {
+          display: flex;
+
+          p {
+            color: rgb(100, 100, 100);
+            letter-spacing: 0;
+            margin-top: 3px;
+            font-weight: 500;
+
+          }
+
+          .icon {
+            color: #ec7a7a;
+            // min-width: 15px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}

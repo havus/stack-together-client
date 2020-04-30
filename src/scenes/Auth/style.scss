@@ -1,0 +1,144 @@
+#auth {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  // display: flex;
+  margin-top: 60px;
+}
+
+#cover-box {
+  position: absolute;
+  z-index: 3;
+  min-height: 100%;
+  width: 400px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #1e0867 100%);
+  color: white;
+  transition: 1s ease;
+  overflow: hidden;
+
+  h1 {
+    font-size: 30px;
+    letter-spacing: .5px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #cover-box__sign-up, #cover-box__sign-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    min-width: 350px;
+    transition: .6s ease;
+
+  }
+  button {
+    padding: 10px 17px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    transition: 1s;
+
+    span {
+      transition: .7s;
+    }
+  }
+}
+
+#sign-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 500px;
+  transition: 1s ease;
+  position: absolute;
+  // flex-grow: 1;
+  min-height: 100%;
+
+  #signin-box__main {
+    min-width: 400px;
+
+    h1 {
+      font-size: 30px;
+      letter-spacing: .5px;
+      font-weight: 700;
+      color: #2d4e8b;
+      text-align: center;
+    }
+
+    #login-third-party {
+      display: flex;
+      justify-content: center;
+
+      div {
+        margin: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid rgb(139, 139, 139);
+
+        // logo google
+        img {
+          height: 24px;
+          // width: 17px;
+        }
+      }
+    }
+
+    #fields {
+      div {
+        width: 100%;
+        margin: 5px 0;
+        position: relative;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 12px;
+          transform: translateY(-50%);
+        }
+
+        input {
+          width: 100%;
+          min-height: 43px;
+          padding-left: 40px;
+          color: rgb(95, 95, 95);
+
+          &::placeholder {
+            font-weight: 300;
+            color: rgb(146, 146, 146);
+            letter-spacing: .5px;
+          }
+        }
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        color: rgb(102, 102, 102);
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+}

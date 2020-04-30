@@ -1,0 +1,32 @@
+.side-bar {
+  left: 0;
+  padding-top: 50px;
+  position: fixed;
+  width: 270px;
+  border-right: .5px solid #f5f6fa;
+  height: 100%;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+
+  li {
+    color: rgb(108, 111, 124);
+    font-weight: 600;
+    padding: 10px 20px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      background-color: black;
+      width: 100px;
+      height: 100px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: #eceefd;
+      
+      &::after {
+        
+      }
+    }
+  }
+}
