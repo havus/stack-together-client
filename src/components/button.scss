@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 5px;
+  padding: 9px 20px;
+  margin: 1px;
+  flex-grow: 0;
+  letter-spacing: .5px;
+  font-weight: 300;
+  transition: .3s;
+  box-shadow: 0 2px 6px rgba(66, 66, 66, .5);
+  -moz-box-shadow: 0 2px 6px rgba(66, 66, 66, .5);
+  -webkit-box-shadow: 0 2px 6px rgba(66, 66, 66, .5);
+  outline:none;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 1.5px 3px rgba(66, 66, 66, 0.493);
+    -moz-box-shadow: 0 1.5px 3px rgba(66, 66, 66, 0.493);
+    -webkit-box-shadow: 0 1.5px 3px rgba(66, 66, 66, 0.493);
+  }
+  &:active {
+    cursor: pointer;
+    box-shadow: 0 1px 1.3px rgba(66, 66, 66, 0.493);
+    -moz-box-shadow: 0 1px 1.3px rgba(66, 66, 66, 0.493);
+    -webkit-box-shadow: 0 1px 1.3px rgba(66, 66, 66, 0.493);
+  }
+
+  &.circle {
+    border-radius: 30px;
+  }
+
+  &.blue {
+    color: white;
+    background-color: #0a80f5;
+
+    &:hover {
+      background-color: #0973dc;
+    }
+    &:active {
+      background-color: #0866c4;
+    }
+  }
+}
